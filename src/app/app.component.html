@@ -1,0 +1,10 @@
+<h1>Switchboard</h1>
+
+<div class="bg" *ngFor="let switch of switches; let i = index">
+  <div
+    class="switchStyle" 
+    [ngClass]="{on: switch === 'on', off: switch === 'off'}" 
+    (click)="switchToggle(i)">
+    {{ switch }}
+  </div>
+</div>
